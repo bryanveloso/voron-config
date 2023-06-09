@@ -1,0 +1,7 @@
+# .gitignore
+
+# AXDL Output.
+*.csv
+
+# Backup Files.
+printer-*.cfg
