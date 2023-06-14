@@ -28,6 +28,9 @@ cors_domains =
 channel = dev
 refresh_interval = 168
 
+[file_manager]
+enable_object_processing = True
+
 [update_manager mainsail-config]
 type = git_repo
 primary_branch = master
@@ -41,9 +44,18 @@ channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
-[update_manager z_calibration]
+[update_manager crowsnest]
 type = git_repo
-path = /home/voron/klipper_z_calibration
-origin = https://github.com/protoloft/klipper_z_calibration.git
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+managed_services = crowsnest
+install_script = tools/pkglist.sh
+
+[update_manager Klipper-Adaptive-Meshing-Purging]
+type = git_repo
+channel = dev
+path = ~/Klipper-Adaptive-Meshing-Purging
+origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
 managed_services = klipper
+primary_branch = main
 
